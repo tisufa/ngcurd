@@ -1,0 +1,13 @@
+<button
+  class="btn"
+  (click)="handleClick($event)"
+  [ngClass]="[
+    'btn-' + (variant || 'primary' | lowercase),
+    customClass || '',
+    size ? 'btn-' + (size | lowercase) : ''
+  ]"
+  [disabled]="disabled"
+  type="button"
+>
+  <ng-content></ng-content>
+</button>

@@ -1,0 +1,12 @@
+<app-popup [header]="header">
+  <p class="mb-0" [innerHTML]="message"></p>
+
+  <ng-template #footer>
+    <app-button variant="SECONDARY" (onClick)="onChange.emit(false)">
+      {{ negativeButton || "Cancel" }}</app-button
+    >
+    <app-button [variant]="variant" (onClick)="onChange.emit(true)">
+      {{ positiveButton || "Save" }}
+    </app-button>
+  </ng-template>
+</app-popup>

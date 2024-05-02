@@ -1,0 +1,24 @@
+<h2 class="mb-3">Sign In</h2>
+<form [formGroup]="formGroup" (keyup.enter)="handleSignIn()">
+  <app-form-group label="Username" customClass="w-100">
+    <app-input
+      formControlName="username"
+      placeholder="Enter username"
+    ></app-input>
+  </app-form-group>
+
+  <app-form-group label="Password" customClass="w-100">
+    <app-input
+      type="password"
+      formControlName="password"
+      placeholder="Enter password"
+    ></app-input>
+  </app-form-group>
+
+  <div class="d-flex justify-content-end gap-2 mt-4">
+    <app-button variant="SECONDARY" (onClick)="handleSignUp()">
+      Sign Up
+    </app-button>
+    <app-button (onClick)="handleSignIn()">Sign In</app-button>
+  </div>
+</form>

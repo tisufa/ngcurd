@@ -1,0 +1,18 @@
+<app-lazy-load
+  [isLoading]="isLoading || isProcessing"
+  (onLoadMore)="handleLoadMore()"
+>
+  <div class="images">
+    <a
+      [href]="photo.url"
+      target="_blank"
+      class="image"
+      *ngFor="let photo of photos"
+    >
+      <img [src]="photo.url" [alt]="photo.title" loading="lazy" />
+      <div class="p-2">
+        {{ photo.title }}
+      </div>
+    </a>
+  </div>
+</app-lazy-load>

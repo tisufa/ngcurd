@@ -1,0 +1,18 @@
+<div class="input-group">
+  <span class="input-group-text">
+    <em class="fas fa-envelope"></em>
+  </span>
+  <input
+    type="email"
+    class="form-control"
+    [value]="formControl.value || '' | lowercase"
+    (input)="handleInput($event)"
+    (blur)="formControl.markAsTouched()"
+    [placeholder]="placeholder || ''"
+    [ngClass]="[isValid ? 'is-valid' : '', isInvalid ? 'is-invalid' : '']"
+  />
+</div>
+
+<small class="text-danger" *ngIf="isInvalid">
+  {{ formControl.errors?.message }}
+</small>

@@ -1,0 +1,23 @@
+<select
+  class="form-select"
+  [formControl]="formControl"
+  (change)="handleChange()"
+  [ngClass]="[isValid ? 'is-valid' : '', isInvalid ? 'is-invalid' : '']"
+  [compareWith]="compareFn.bind(this)"
+>
+  <option [ngValue]="null" *ngIf="placeholder">
+    {{ placeholder }}
+  </option>
+  <option
+    [ngValue]="
+      optionValueField ? (option | resolveFieldData : optionValueField) : option
+    "
+    *ngFor="let option of options"
+  >
+    {{ option | resolveFieldData : optionViewField || "name" }}
+  </option>
+</select>
+
+<small class="text-danger" *ngIf="isInvalid">
+  {{ formControl.errors?.message }}
+</small>

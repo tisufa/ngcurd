@@ -1,0 +1,11 @@
+export enum VariantEnum {
+  PRIMARY = 'PRIMARY',
+  SECONDARY = 'SECONDARY',
+  INFO = 'INFO',
+  SUCCESS = 'SUCCESS',
+  WARNING = 'WARNING',
+  DANGER = 'DANGER',
+  LIGHT = 'LIGHT',
+  DARK = 'DARK',
+  WHITE = 'WHITE',
+}

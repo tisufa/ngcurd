@@ -1,0 +1,34 @@
+<app-popup>
+  <form [formGroup]="formGroup">
+    <app-form-group label="Username" customClass="w-100">
+      <app-input
+        formControlName="username"
+        placeholder="Enter username"
+      ></app-input>
+    </app-form-group>
+
+    <app-form-group label="Email" customClass="w-100">
+      <app-input
+        type="email"
+        formControlName="email"
+        placeholder="Enter email"
+      ></app-input>
+    </app-form-group>
+
+    <app-form-group label="Role" customClass="w-100">
+      <app-select
+        formControlName="roleName"
+        [options]="roles"
+        optionValueField="value"
+        placeholder="Select role"
+      ></app-select>
+    </app-form-group>
+
+    <div class="d-flex justify-content-end gap-2 mt-4">
+      <app-button variant="SECONDARY" (onClick)="handleCancel()">
+        Cancel
+      </app-button>
+      <app-button (onClick)="handleSubmit()">Submit</app-button>
+    </div>
+  </form>
+</app-popup>

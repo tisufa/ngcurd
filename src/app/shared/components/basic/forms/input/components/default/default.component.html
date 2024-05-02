@@ -1,0 +1,10 @@
+<input
+  type="text"
+  class="form-control"
+  [formControl]="formControl"
+  [placeholder]="placeholder || ''"
+  [ngClass]="[isValid ? 'is-valid' : '', isInvalid ? 'is-invalid' : '']"
+/>
+<small class="text-danger" *ngIf="isInvalid">
+  {{ formControl.errors?.message }}
+</small>

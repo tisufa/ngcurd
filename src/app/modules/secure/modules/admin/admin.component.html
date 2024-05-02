@@ -1,0 +1,14 @@
+<app-card>
+  <app-table [model]="tableModel" stringUrl="/users" header="Users">
+    <ng-template #actionButtons let-record>
+      <div class="d-flex gap-2">
+        <app-button variant="WARNING" size="SM" (onClick)="handleEdit(record)">
+          <em class="fas fa-pen"></em>
+        </app-button>
+        <app-button variant="DANGER" size="SM" (onClick)="handleDelete(record)">
+          <em class="fas fa-trash"></em>
+        </app-button>
+      </div>
+    </ng-template>
+  </app-table>
+</app-card>

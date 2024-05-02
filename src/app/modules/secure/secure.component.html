@@ -1,0 +1,12 @@
+<div class="secure-wrapper">
+  <div class="mb-3 d-flex justify-content-between align-items-center">
+    <h4>Welcome back {{ globalService.session.user.model.username }}</h4>
+    <em
+      class="fa-solid fa-right-from-bracket cursor-pointer"
+      (click)="handleSignOut()"
+    ></em>
+  </div>
+  <div class="content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>

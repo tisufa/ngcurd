@@ -1,0 +1,21 @@
+div.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  a.image {
+    text-decoration: none;
+    color: initial;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

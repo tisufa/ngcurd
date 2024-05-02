@@ -1,0 +1,8 @@
+<div class="lazy-load" appScroll (onScrollEnd)="onLoadMore.emit()">
+  <div class="d-block">
+    <ng-content></ng-content>
+  </div>
+  <div class="d-block mt-3" *ngIf="isLoading">
+    <app-loading></app-loading>
+  </div>
+</div>
